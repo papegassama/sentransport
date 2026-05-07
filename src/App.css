@@ -20,3 +20,58 @@
     padding: 12px;
   }
 }
+
+/* Styles responsives pour les mobiles (Étape 13) */
+@media (max-width: 600px) {
+  .contenu {
+    padding: 12px;
+  }
+
+  .ligne-bus {
+    padding: 10px 12px;
+  }
+
+  .ligne-numero {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    margin-right: 12px;
+  }
+
+  .ligne-trajet {
+    font-size: 0.9rem;
+  }
+
+  .ligne-arrets {
+    font-size: 0.75rem;
+  }
+
+  .recherche-input {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+
+  .detail-ligne {
+    padding: 12px;
+  }
+
+  .detail-titre {
+    font-size: 1rem;
+  }
+
+  .arret-numero {
+    width: 24px;
+    height: 24px;
+    font-size: 0.7rem;
+    margin-right: 10px;
+  }
+
+  .arret-nom {
+    font-size: 0.85rem;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+    padding: 12px;
+  }
+}
