@@ -46,5 +46,21 @@
     "arrivee": "Sandaga",
     "arrets": 11,
     "listeArrets": ["Yoff Village", "Aeroport LSS", "Parcelles U17", "Grand Yoff", "HLM", "Sandaga"]
+  },
+  {
+    "id": 7,
+    "numero": "9",
+    "depart": "Liberte 6",
+    "arrivee": "Palais",
+    "arrets": 8,
+    "listeArrets": ["Liberte 6", "Mermoz", "Fann", "Point E", "HLM", "Gueule Tapee", "Palais"]
+  },
+  {
+    "id": 8,
+    "numero": "25",
+    "depart": "Yeumbeul",
+    "arrivee": "Rebeuss",
+    "arrets": 13,
+    "listeArrets": ["Yeumbeul", "Malika", "Thiaroye", "Pikine", "Grand Yoff", "Parcelles", "HLM", "Gueule Tapee", "Rebeuss"]
   }
 ]

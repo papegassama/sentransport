@@ -9,12 +9,17 @@ CORS(app)
 with open("./api/lignes_ddd.json", "r") as f:
     lignes = json.load(f)
 
+# Charger les arrêts (NOUVEAU - Étape 3)
+with open("./api/arrets.json", "r") as f:
+    arrets = json.load(f)
+
 @app.route("/")
 def accueil():
     return jsonify({
         "message": "Bienvenue sur l'API SenTransport !",
         "endpoints": ["/lignes", "/lignes/<id>"]
     })
+
 
 @app.route("/lignes")
 def get_lignes():
@@ -27,24 +32,28 @@ def get_ligne(ligne_id):
         return jsonify({"erreur": "Ligne non trouvee"}), 404
     return jsonify(ligne)
 
-#=== Exercice 1 : Lab 4
 @app.route("/arrets")
 def get_arrets():
-    # Extraire tous les arrêts de toutes les lignes
-    tous_les_arrets = []
-    for ligne in lignes:
-        tous_les_arrets.extend(ligne["listeArrets"])
+    return jsonify(arrets)
+
+#=== Exercice 1 : Lab 4
+# @app.route("/arrets")
+# def get_arrets():
+#     # Extraire tous les arrêts de toutes les lignes
+#     tous_les_arrets = []
+#     for ligne in lignes:
+#         tous_les_arrets.extend(ligne["listeArrets"])
     
-    # Supprimer les doublons avec set(), puis reconvertir en liste
-    arrets_sans_doublons = list(set(tous_les_arrets))
+#     # Supprimer les doublons avec set(), puis reconvertir en liste
+#     arrets_sans_doublons = list(set(tous_les_arrets))
     
-    # Trier par ordre alphabétique pour un affichage plus propre
-    arrets_sans_doublons.sort()
+#     # Trier par ordre alphabétique pour un affichage plus propre
+#     arrets_sans_doublons.sort()
     
-    return jsonify({
-        "total": len(arrets_sans_doublons),
-        "arrets": arrets_sans_doublons
-    })
+#     return jsonify({
+#         "total": len(arrets_sans_doublons),
+#         "arrets": arrets_sans_doublons
+#     })
 #=== Fin Exercice 1 : Lab 4
 #=== Exercice 2 : Lab 4
 @app.route("/stats")
